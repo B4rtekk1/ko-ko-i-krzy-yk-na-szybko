@@ -82,23 +82,23 @@ namespace Kółko_i_krzyżyk_na_szybko
         {
             for (int i = 0; i < 3; i++)
             {
-                if (buttons[i, 0].Text == buttons[i, 1].Text && buttons[i, 0].Text == buttons[i, 2].Text)
+                if (buttons[i, 0].Text == buttons[i, 1].Text && buttons[i, 1].Text == buttons[i, 2].Text && !string.IsNullOrEmpty(buttons[i, 0].Text))
                 {
                     return true;
                 }
             }
             for(int i = 0; i < 3; i++)
             {
-                if (buttons[0, i].Text == buttons[1, i].Text && buttons[0, i].Text == buttons[2, i].Text)
+                if (buttons[0, i].Text == buttons[1, i].Text && buttons[1, i].Text == buttons[2, i].Text && !string.IsNullOrEmpty(buttons[0, i].Text))
                 {
                     return true;
                 }
             }
-            if (buttons[0,0].Text == buttons[1, 1].Text && buttons[0, 0].Text == buttons[2, 2].Text)
+            if (buttons[0,0].Text == buttons[1, 1].Text && buttons[1, 1].Text == buttons[2, 2].Text && !string.IsNullOrEmpty(buttons[0, 0].Text))
             {
                 return true;
             }
-            if (buttons[0, 2].Text == buttons[1, 1].Text && buttons[0, 2].Text == buttons[2, 0].Text)
+            if (buttons[0, 2].Text == buttons[1, 1].Text && buttons[1, 1].Text == buttons[2, 0].Text && !string.IsNullOrEmpty(buttons[0, 2].Text))
             {
                 return true;
             }
